@@ -1,0 +1,151 @@
+/**
+ * About Features Admin Styles
+ */
+
+.studyabroad-features-wrap {
+  max-width: 800px;
+}
+
+.studyabroad-features-wrap h1 {
+  margin-bottom: 10px;
+}
+
+.studyabroad-features-wrap .description {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.features-container {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccd0d4;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.features-list {
+  margin-bottom: 15px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  background: #f6f7f7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.feature-item:hover {
+  border-color: #0073aa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item.ui-sortable-helper {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item.ui-sortable-placeholder {
+  visibility: visible !important;
+  background: #e5f5fa;
+  border: 2px dashed #0073aa;
+}
+
+.feature-handle {
+  cursor: move;
+  color: #999;
+  font-size: 18px;
+}
+
+.feature-handle:hover {
+  color: #0073aa;
+}
+
+.feature-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.feature-input:focus {
+  border-color: #0073aa;
+  box-shadow: 0 0 0 1px #0073aa;
+  outline: none;
+}
+
+.remove-feature {
+  padding: 4px 8px !important;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-feature .dashicons {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  color: #a00;
+}
+
+.remove-feature:hover {
+  background: #dc3232 !important;
+  border-color: #dc3232 !important;
+}
+
+.remove-feature:hover .dashicons {
+  color: #fff;
+}
+
+#add-feature {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 15px !important;
+}
+
+#add-feature .dashicons {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+#add-feature:hover {
+  background: #0073aa !important;
+  border-color: #0073aa !important;
+  color: #fff !important;
+}
+
+/* Animation for new items */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-item.new-item {
+  animation: slideIn 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .feature-item {
+    flex-wrap: wrap;
+  }
+
+  .feature-input {
+    width: 100%;
+    order: 3;
+    margin-top: 10px;
+  }
+}
